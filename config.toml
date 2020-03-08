@@ -1,5 +1,5 @@
 baseurl = "http://www.dochne.com"
-title = "johndoe"
+title = "dochne"
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
@@ -14,19 +14,19 @@ pygmentscodefencesguesssyntax = true
 disqusShortname = "yourdiscussshortname"
 
 [params]
-    author = "John Doe"
-    info = "Full Stack DevOps and Magician"
-    description = "John Doe's personal website"
-    keywords = "blog,developer,personal"
+    author = "Doug Nelson"
+    info = "Senior Software/DevOps Engineer"
+    description = "Doug's website primarily"
+    keywords = "blog,developer"
     avatarurl = "images/avatar.jpg"
 
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
 
-    footercontent = "Enter a text here."
+#    footercontent = "Enter a text here."
 
-    hidecredits = false
-    hidecopyright = false
+    hidecredits = true
+    hidecopyright = true
 
     rtl = false
 
@@ -38,17 +38,17 @@ disqusShortname = "yourdiscussshortname"
     name = "Github"
     icon = "fab fa-github fa-2x"
     weight = 1
-    url = "https://github.com/johndoe/"
-[[params.social]]
-    name = "Gitlab"
-    icon = "fab fa-gitlab fa-2x"
-    weight = 2
-    url = "https://gitlab.com/johndoe/"
+    url = "https://github.com/dolondro/"
+#[[params.social]]
+#    name = "Gitlab"
+#    icon = "fab fa-gitlab fa-2x"
+#    weight = 2
+#    url = "https://gitlab.com/johndoe/"
 [[params.social]]
     name = "Twitter"
     icon = "fab fa-twitter fa-2x"
     weight = 3
-    url = "https://twitter.com/johndoe/"
+    url = "https://twitter.com/dolondro/"
 
 # Menu links
 [[menu.main]]
