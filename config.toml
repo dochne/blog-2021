@@ -1,4 +1,4 @@
-baseurl = "http://www.dochne.com"
+baseurl = "https://dochne.com"
 title = "dochne"
 theme = "hugo-coder"
 languagecode = "en"
