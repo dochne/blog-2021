@@ -23,6 +23,7 @@ docker run --network myproject_default -v "$PWD/docs/schemaspy:/output/" schemas
 ```
 
 This command is making the assumptions that:
+
 1. you're running your local project through `docker-compose` under the name `myproject`
 2. your database is called `myproject_database`
 
