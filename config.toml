@@ -3,17 +3,22 @@ baseurl = "http://example.com"
 title = "Dochne"
 #theme = "hugo-coder"
 theme = "anatole"
-languagecode = "en"
-defaultcontentlanguage = "en"
+#languagecode = "en"
+#defaultcontentlanguage = "en"
 
 paginate = 20
 canonifyurls = true
 
-pygmentsstyle = "bw"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+#pygmentsstyle = "bw"
+#pygmentscodefences = true
+#pygmentscodefencesguesssyntax = true
 
 #disqusShortname = "yourdiscussshortname"
+
+[Languages]
+  [Languages.en]
+  weight = 1
+  LanguageName = "EN"
 
 [params]
     author = "Doug Nelson"
