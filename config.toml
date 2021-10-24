@@ -19,6 +19,7 @@ canonifyurls = true
   [Languages.en]
   weight = 1
   LanguageName = "EN"
+  LanguageDirection = "ltr"
 
 [params]
     author = "Doug Nelson"
