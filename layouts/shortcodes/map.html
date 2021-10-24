@@ -1,0 +1,102 @@
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+{{ $js := resources.Get "leaflet/dist/leaflet.js" }} -->
+
+<!-- 
+<link rel="stylesheet" href="/leaflet/leaflet.css" />
+<script src="/leaflet/leaflet.js"></script> -->
+
+<script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+
+
+<style>
+    #map {
+        width: 100%;
+        height: 400px;
+    }
+</style>
+<div id="map" style="width: 100%; height: 300px; background-color: #00a8c8"></div>
+
+<div style='width: 100%; text-align: center; margin-top: 20px'>
+    <img id='kev_image' style='width: 60%; margin: auto; ' src='/images/kev/DSC00131.JPG'>
+</div>
+
+
+<script>
+
+    L.mapbox.accessToken = 'pk.eyJ1IjoiZG9jaG5lIiwiYSI6ImNrdjVvc3B6NDEwb3Uycmx1MXVmOGJjZG8ifQ.h3HC7UeBhP6cFstbdliq7A';
+    const map = L.mapbox.map('map', 'mapbox.streets', {tap: false})
+        .setView([51.505, -0.09], 2);
+        // .setView([0, 0], 1)
+        // .setZoom(2);
+        
+        //.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+
+
+    // let map = L.map('map', {tap: false}).setView([51.505, -0.09], 2);
+
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    // }).addTo(map);
+
+
+    let locations = [
+        {name: "Derby", lat: 52.952751, long: -1.492370, image: "DSC00131.JPG"},
+        {name: "Leeds", lat: 53.826220, long: -1.581560, image: "DSC00437.JPG"},
+        {name: "Val Thorens", lat: 45.297920, long: 6.583570, image: "IMAG0147.jpg", other: ["IMAG0187.jpg"]},
+        {name: "Barcelona", lat: 41.3799602910571, long: 2.162074376454599, image: "IMG_20140726_084042.jpg"},
+        {name: "Austin", lat: 30.267956712794728, long: -97.74287072236368, image: "IMG_20160919_190653.jpg"},
+        {name: "San Francisco", lat: 37.79437975066434, long: -122.39839614160591, image: "IMG_20161008_110916.jpg"},
+        {name: "Seattle", lat: 47.58133543842707, long: -122.40540928011868, image: "IMG_20161017_152638.jpg"},
+        {name: "Tignes", lat: 45.47981379479466, long: 6.92322304982902, image: "IMG_20170114_230804.jpg"},
+        {name: "Carcasonne", lat: 43.2102700825179, long: 2.347371161328071, image: "IMG_20170610_152030.jpg"},
+        {name: "Azores", lat: 37.7664330223703, long: -25.494972305104824, image: "IMG_20180731_140448.jpg"},
+        {name: "Las Vegas", lat: 36.12298093612349, long: -115.17178783357332, image: "IMG_20181130_191243.jpg"},
+        {name: "Banff", lat: 51.18560341947141, long: -115.55556129128644, image: "MVIMG_20190125_113121.jpg"},
+        {name: "Snowdon", lat: 53.0155760430515, long: -4.106842651676612, image: "PXL_20210426_091104562.PORTRAIT.jpg"},
+        {name: "Hay-on-Wye", lat: 52.07118887073983, long: -3.1412143349604253, image: "PXL_20210815_101410939.jpg"},
+        {name: "Dornelas", lat: 40.9400929944648, long: -7.52677489489681, image: "PXL_20211023_161459964.MP.jpg"},
+        {name: "Bruges", lat: 51.20858395809092, long: 3.2240368433514703, image: "34326_439996388734_5776038_n.jpg"},
+        {name: "Adelaide - I'm from here! :D", lat: -34.947556376794715, long: 138.6015147412251, image: ''}
+    ];
+
+//     var marker = L.marker([0, 0], {
+//   icon: L.mapbox.marker.icon({
+//     'marker-color': '#f86767'
+//   })
+// }).addTo(map);
+
+    for (let x=0; x<locations.length; x++) {
+        let location = locations[x];
+
+        L.marker(
+            [location.lat, location.long],
+            {
+                autoPan: false
+            }
+        )
+            .addTo(map)
+            .on('click', function(){
+                console.log(location.image);
+                updateImage(location.image);
+            })
+            .bindPopup(location.name);
+    }
+
+
+    function updateImage(src) {
+        let image = document.getElementById('kev_image');
+        if (src === '') {
+            image.style.display='none';
+            image.src = '';
+        } else {
+            image.style.display='block';
+            image.src='/images/kev/' + src;
+        }
+        
+    }
+
+    updateImage('');
+        // .openPopup();
+</script>

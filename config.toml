@@ -1,6 +1,8 @@
-baseurl = "https://dochne.com"
+#baseurl = "https://dochne.com"
+baseurl = "http://example.com"
 title = "Dochne"
-theme = "hugo-coder"
+#theme = "hugo-coder"
+theme = "anatole"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
@@ -16,9 +18,10 @@ pygmentscodefencesguesssyntax = true
 [params]
     author = "Doug Nelson"
     info = "Senior Software/DevOps Engineer"
-    description = "Doug's website primarily"
+#     description = "Doug's website primarily"
+    title = "Doug Nelson"
     keywords = "blog,developer"
-    avatarurl = "images/avatar.jpg"
+    profilePicture = "images/avatar.jpg"
 
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
@@ -28,33 +31,36 @@ pygmentscodefencesguesssyntax = true
     hidecredits = true
     hidecopyright = true
 
+    enableMediumZoom = false
     rtl = false
+    disableThemeSwitcher = true
+    doNotLoadAnimations = true
 
-    math = true
-    custom_css = ["css/custom.css"]
+#     math = true
+#     custom_css = ["css/custom.css"]
 
 # Social links
-[[params.social]]
+[[params.socialIcons]]
     name = "Github"
     icon = "fab fa-github fa-2x"
     weight = 1
-    url = "https://github.com/dolondro/"
+    url = "https://github.com/dochne/"
 #[[params.social]]
 #    name = "Gitlab"
 #    icon = "fab fa-gitlab fa-2x"
 #    weight = 2
 #    url = "https://gitlab.com/johndoe/"
-[[params.social]]
+[[params.socialIcons]]
     name = "Twitter"
     icon = "fab fa-twitter fa-2x"
     weight = 3
     url = "https://twitter.com/dolondro/"
 
 # Menu links
-[[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "/posts/"
+# [[menu.main]]
+#     name = "Blog"
+#     weight = 1
+#     url  = "/posts/"
 [[menu.main]]
     name = "Projects"
     weight = 2
@@ -63,3 +69,7 @@ pygmentscodefencesguesssyntax = true
     name = "About"
     weight = 3
     url = "/about/"
+[[menu.main]]
+    name = "Kev"
+    weight = 4
+    url = "/kev/"
