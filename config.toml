@@ -1,19 +1,16 @@
-#baseurl = "https://dochne.com"
-baseurl = "http://example.com"
+baseURL = "https://dochne.com"
+languageCode = "en"
+DefaultContentLanguage = "en"
 title = "Dochne"
-#theme = "hugo-coder"
 theme = "anatole"
-#languagecode = "en"
-#defaultcontentlanguage = "en"
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
 
-paginate = 20
-canonifyurls = true
+pygmentsUseClasses = true   
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
 
-#pygmentsstyle = "bw"
-#pygmentscodefences = true
-#pygmentscodefencesguesssyntax = true
-
-#disqusShortname = "yourdiscussshortname"
 
 [Languages]
   [Languages.en]
@@ -22,23 +19,17 @@ canonifyurls = true
   LanguageDirection = "ltr"
 
 [params]
+    title = "Doug Nelson"
     author = "Doug Nelson"
     info = "Senior Software/DevOps Engineer"
-#     description = "Doug's website primarily"
-    title = "Doug Nelson"
     keywords = "blog,developer"
     profilePicture = "images/avatar.jpg"
 
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
 
-#    footercontent = "Enter a text here."
-
-    hidecredits = true
-    hidecopyright = true
-
     enableMediumZoom = false
-    rtl = false
+    
     disableThemeSwitcher = true
     doNotLoadAnimations = true
 
